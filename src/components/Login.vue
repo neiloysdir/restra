@@ -4,12 +4,13 @@
     <div class="register">
         <input type="email" v-model="email" placeholder="Enter Email" />
         <input type="password" v-model="password" placeholder="Enter Password" />
-        <button @click="Login">Sign Up</button>
+        <button @click="Login">Login</button>
         <p :style="{display: inline}">Don't Have an Account? <router-link class="link" :to="{ name: 'SignUp' }">Sign Up</router-link></p>
     </div>
 </template>
 
 <script>
+import axios from 'axios'
 export default {
     name: 'LoginPage',
     data() {
@@ -17,6 +18,48 @@ export default {
             email: "",
             password: ""
         }
+    },
+    methods: {
+        async Login() {
+            console.log('login called')
+            let result = await axios.get(
+                `http://localhost:3000/users?email=${this.email}&password=${this.password}`
+            )
+            console.log(result)
+            if(result.status == 200 && result.data.length >= 1) {
+                alert('user found')
+            } else {
+                alert('user not found')
+            }
+        }
     }
 }
 </script>
+
+<style scoped>
+.logo {
+  width: 50px;
+}
+.register input {
+  display: block;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.register button {
+  width: 345px;
+  height: 60px;
+  border: none;
+  color: white;
+  background-color: #151546;
+  font-size: 15px;
+  font-weight: bolder;
+}
+.link {
+  text-decoration: none;
+  font-weight: bolder;
+  color: #151546;
+}
+</style>
