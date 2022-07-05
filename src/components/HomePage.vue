@@ -1,10 +1,14 @@
 <template>
-    <h1>Hello</h1>
+    <HeaderComp/>
 </template>
 
 <script>
+import HeaderComp from './Header.vue'
 export default {
     name: 'HomePage',
+    components: {
+        HeaderComp
+    },
     mounted() {
     let user = localStorage.getItem('user-info')
     if(!user) {
