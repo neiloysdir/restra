@@ -11,6 +11,12 @@
       "name": "mehdi",
       "password": "12345",
       "id": 2
+    },
+    {
+      "email": "test",
+      "name": "test user",
+      "password": "test",
+      "id": 3
     }
   ]
 }

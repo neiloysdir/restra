@@ -1,8 +1,8 @@
 <template>
   <div class="nav">
-    <a href="#">Home</a>
-    <a href="#">Resturant</a>
-    <a href="#">Edit Resturants</a>
+    <router-link to="/">Home</router-link>
+    <router-link to="/AddRest">Add Resturant</router-link>
+    <router-link to="/EditRest">Edit Resturants</router-link>
     <a @click="Logout" href="#">Logout</a>
   </div>
 </template>
@@ -12,8 +12,8 @@ export default {
   name: "HeaderComp",
   methods: {
     Logout() {
-        localStorage.clear()
-        this.$router.push({name: 'LoginPage' })
+      localStorage.clear()
+      this.$router.go({name: 'LoginPage' })
     }
   }
 };
