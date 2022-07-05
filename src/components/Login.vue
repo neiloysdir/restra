@@ -15,7 +15,7 @@
 <script>
 import axios from "axios";
 export default {
-  name: "LoginPage",
+  name: 'LoginPage',
   data() {
     return {
       email: "",

@@ -1,8 +1,8 @@
 <template>
   <div class="nav">
     <router-link to="/">Home</router-link>
-    <router-link to="/AddRest">Add Resturant</router-link>
-    <router-link to="/EditRest">Edit Resturants</router-link>
+    <router-link to="/AddRest">Add</router-link>
+    <router-link to="/EditRest">Edit</router-link>
     <a @click="Logout" href="#">Logout</a>
   </div>
 </template>
@@ -13,7 +13,7 @@ export default {
   methods: {
     Logout() {
       localStorage.clear()
-      this.$router.go({name: 'LoginPage' })
+      this.$router.push({name: 'LoginPage' })
     }
   }
 };

@@ -1,6 +1,6 @@
 <template>
     <HeaderComp/>
-    <h1>Add Resturants</h1>
+    <h1>Add</h1>
 </template>
 
 <script>

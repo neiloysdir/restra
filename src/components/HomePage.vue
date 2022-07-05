@@ -17,13 +17,14 @@ export default {
   },
   mounted() {
     let user = localStorage.getItem("user-info");
-      if (!user) {
-        console.log("user not found");
-        this.$router.push({ path: "/Login" });
-      } else {
-        console.log("user not found");
-      }
-      this.name = JSON.parse(user)[0].name;
+    if (user === null) {
+      console.log("user not found");
+      this.$router.push({name: 'LoginPage' })
+      location.reload();
+    } else {
+      console.log("user found");
+    }
+    this.name = JSON.parse(user)[0].name;
   },
 };
 </script>
