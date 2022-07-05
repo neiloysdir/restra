@@ -31,19 +31,13 @@ export default {
       console.log(result)
       if(result.status == 201) {
         localStorage.setItem("user-info",JSON.stringify(result.data))
-        this.$router.push({name: 'HomePage'})
+        this.$router.push({name: 'LoginPage'})
       }
       this.name = "";
       this.email = "";
       this.password = "";
     },
   },
-  mounted() {
-    let user = localStorage.getItem('user-info')
-    if(user) {
-      this.$router.push({name: 'HomePage'})
-    }
-  }
 };
 </script>
 
