@@ -17,6 +17,12 @@
       "name": "test user",
       "password": "test",
       "id": 3
+    },
+    {
+      "email": "test",
+      "name": "test",
+      "password": "test",
+      "id": 4
     }
   ]
 }

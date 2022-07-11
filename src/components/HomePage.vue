@@ -15,12 +15,11 @@ export default {
   components: {
     HeaderComp,
   },
-  mounted() {
+  async mounted() {
     let user = localStorage.getItem("user-info");
     if (user === null) {
       console.log("user not found");
       this.$router.push({name: 'LoginPage' })
-      location.reload();
     } else {
       console.log("user found");
     }
