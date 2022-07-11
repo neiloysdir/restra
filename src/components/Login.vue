@@ -5,7 +5,7 @@
     <input type="email" v-model="email" placeholder="Enter Email" />
     <input type="password" v-model="password" placeholder="Enter Password" />
     <button @click="Login">Login</button>
-    <p :style="{ display: inline }">
+    <p>
       Don't Have an Account?
       <router-link class="link" :to="{ name: 'SignUp' }">Sign Up</router-link>
     </p>

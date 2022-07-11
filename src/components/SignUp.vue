@@ -6,7 +6,7 @@
     <input type="email" v-model="email" placeholder="Enter Email" />
     <input type="password" v-model="password" placeholder="Enter Password" />
     <button @click="signUp">Sign Up</button>
-    <p :style="{display: inline}">Have an Account? <router-link class="link" :to="{ name: 'LoginPage' }">Login</router-link></p>
+    <p>Have an Account? <router-link class="link" :to="{ name: 'LoginPage' }">Login</router-link></p>
   </div>
 </template>
 
